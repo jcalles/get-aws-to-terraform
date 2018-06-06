@@ -13,7 +13,8 @@ terraformget(){
 		echo "deleting empty tf files"
 		echo '---------------------------'	
 		
-		find $(pwd) -type f -name '*.tf' | xargs wc -l | grep ' 1 .'|xargs rm -f
+		#find $(pwd) -type f -name '*.tf' | xargs wc -l | grep ' 1 .'|xargs rm -f
+		find $(pwd) -type f -name '*.tf' -empty -delete
 		cd ../
 }
 
